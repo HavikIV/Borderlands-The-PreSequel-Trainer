@@ -1,19 +1,21 @@
-﻿Build started 10/7/2015 1:11:06 PM.
+﻿Build started 10/9/2015 3:55:12 PM.
      1>Project "E:\Users\Havik\Documents\Visual Studio 2015\Projects\Borderlands The PreSequel\Borderlands The PreSequel\Borderlands The PreSequel.vcxproj" on node 2 (Rebuild target(s)).
      1>ClCompile:
-         e:\Program Files 2\Microsoft Visual Studio 14.0\VC\bin\CL.exe /c /AI"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5.2\\" /AI"C:\Program Files (x86)\Windows Kits\8.1\References\CommonConfiguration\Neutral" /AI"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5.2\Facades\\" /Zi /clr /nologo /W3 /WX- /O2 /Oy- /D WIN32 /D NDEBUG /D _UNICODE /D UNICODE /EHa /MD /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"Release\\" /Fd"Release\vc140.pdb" /TP /FU"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5.2\mscorlib.dll" /FU"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5.2\System.Data.dll" /FU"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5.2\System.dll" /FU"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5.2\System.Drawing.dll" /FU"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5.2\System.Windows.Forms.dll" /FU"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5.2\System.Xml.dll" /analyze- /errorReport:prompt /clr:nostdlib Borderlands_TPS.cpp inputBox.cpp
+         e:\Program Files 2\Microsoft Visual Studio 14.0\VC\bin\CL.exe /c /AI"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5.2\\" /AI"C:\Program Files (x86)\Windows Kits\8.1\References\CommonConfiguration\Neutral" /AI"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5.2\Facades\\" /Zi /clr /nologo /W3 /WX- /O2 /Oy- /D WIN32 /D NDEBUG /D _UNICODE /D UNICODE /EHa /MD /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"Release\\" /Fd"Release\vc140.pdb" /TP /FU"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5.2\mscorlib.dll" /FU"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5.2\System.Data.dll" /FU"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5.2\System.dll" /FU"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5.2\System.Drawing.dll" /FU"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5.2\System.Windows.Forms.dll" /FU"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5.2\System.Xml.dll" /analyze- /errorReport:prompt /clr:nostdlib Borderlands_TPS.cpp inputBox.cpp main.cpp
          Borderlands_TPS.cpp
          inputBox.cpp
+         main.cpp
          Generating Code...
          e:\Program Files 2\Microsoft Visual Studio 14.0\VC\bin\CL.exe /c /Zi /clr /nologo /W3 /WX- /O2 /Oy- /D WIN32 /D NDEBUG /D _UNICODE /D UNICODE /EHa /MD /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fp"Release\Borderlands The PreSequel.pch" /Fa"Release\\" /Fo"Release\\" /Fd"Release\vc140.pdb" /analyze- /errorReport:prompt "e:\Users\Havik\AppData\Local\Temp\.NETFramework,Version=v4.5.2.AssemblyAttributes.cpp"
          .NETFramework,Version=v4.5.2.AssemblyAttributes.cpp
        Link:
          e:\Program Files 2\Microsoft Visual Studio 14.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"E:\Users\Havik\Documents\Visual Studio 2015\Projects\Borderlands The PreSequel\Release\Borderlands The PreSequel.exe" /INCREMENTAL:NO /NOLOGO kernel32.lib user32.lib advapi32.lib /ASSEMBLYRESOURCE:Release\BorderlandsThePreSequel.Borderlands_TPS.resources /ASSEMBLYRESOURCE:Release\BorderlandsThePreSequel.inputBox.resources /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /Debug /PDB:"E:\Users\Havik\Documents\Visual Studio 2015\Projects\Borderlands The PreSequel\Release\Borderlands The PreSequel.pdb" /TLBID:1 /DYNAMICBASE /FIXED:NO /NXCOMPAT /MACHINE:X86 /SAFESEH Release\Borderlands_TPS.obj
          Release\inputBox.obj
+         Release\main.obj
          "Release\.NETFramework,Version=v4.5.2.AssemblyAttributes.obj"
          Borderlands The PreSequel.vcxproj -> E:\Users\Havik\Documents\Visual Studio 2015\Projects\Borderlands The PreSequel\Release\Borderlands The PreSequel.exe
      1>Done Building Project "E:\Users\Havik\Documents\Visual Studio 2015\Projects\Borderlands The PreSequel\Borderlands The PreSequel\Borderlands The PreSequel.vcxproj" (Rebuild target(s)).
 
 Build succeeded.
 
-Time Elapsed 00:00:05.00
+Time Elapsed 00:00:07.08

@@ -1,18 +1,7 @@
 #pragma once
-#include "pointerAddresses.h"
-#include "loadMemoryFunctions.h"
-#include "inputBox.h"
 #include <iostream>
 #include <Windows.h>
 #include <string.h>
-//#include "inputBox.h"
-
-//global variables
-HWND bltpsWindow = FindWindow(0, _T("Borderlands: The Pre-Sequel (32-bit, DX9)")); //finds the bl2 window
-HANDLE hProcess;	//handle to the process
-DWORD pid;	//holds the Process ID
-DWORD baseAddress;	//holds the address for the module, in other words it's the baseAddress for the pointers
-int offset1 = 0x01CCE828;	//first offset that is added to the baseAddress, value is the '"Borderlands2.exe" + 01ed4798' in Cheat Engine
 
 namespace BorderlandsThePreSequel {
 
@@ -29,25 +18,14 @@ namespace BorderlandsThePreSequel {
 	public ref class Borderlands_TPS : public System::Windows::Forms::Form
 	{
 	public:
-		Borderlands_TPS(void)
-		{
-			InitializeComponent();
-			//
-			//TODO: Add the constructor code here
-			//
-		}
+		Borderlands_TPS(void); //Constructor
 
 	protected:
 		/// <summary>
 		/// Clean up any resources being used.
 		/// </summary>
-		~Borderlands_TPS()
-		{
-			if (components)
-			{
-				delete components;
-			}
-		}
+		~Borderlands_TPS();	//destructor
+
 	private: System::Windows::Forms::TabControl^  tcMain;
 	protected:
 	private: System::Windows::Forms::TabPage^  tpStats;
@@ -142,331 +120,336 @@ namespace BorderlandsThePreSequel {
 	private: System::Windows::Forms::Label^  lblCS4;
 	private: System::Windows::Forms::Label^  lblCS3;
 	private: System::Windows::Forms::Label^  lblCS2;
-private: System::Windows::Forms::Label^  lblCTClass;
-private: System::Windows::Forms::Label^  lblWilClass;
-private: System::Windows::Forms::Label^  lblWS33;
+	private: System::Windows::Forms::Label^  lblCTClass;
+	private: System::Windows::Forms::Label^  lblWilClass;
+	private: System::Windows::Forms::Label^  lblWS33;
 
-private: System::Windows::Forms::Label^  lblWS32;
+	private: System::Windows::Forms::Label^  lblWS32;
 
-private: System::Windows::Forms::Label^  lblWS31;
+	private: System::Windows::Forms::Label^  lblWS31;
 
-private: System::Windows::Forms::Label^  lblWS30;
+	private: System::Windows::Forms::Label^  lblWS30;
 
-private: System::Windows::Forms::Label^  lblWS29;
+	private: System::Windows::Forms::Label^  lblWS29;
 
-private: System::Windows::Forms::Label^  lblWS28;
+	private: System::Windows::Forms::Label^  lblWS28;
 
-private: System::Windows::Forms::Label^  lblWS27;
+	private: System::Windows::Forms::Label^  lblWS27;
 
-private: System::Windows::Forms::Label^  lblWS26;
+	private: System::Windows::Forms::Label^  lblWS26;
 
-private: System::Windows::Forms::Label^  lblWS25;
+	private: System::Windows::Forms::Label^  lblWS25;
 
 
-private: System::Windows::Forms::Label^  lblWS24;
+	private: System::Windows::Forms::Label^  lblWS24;
 
-private: System::Windows::Forms::Label^  lblWS23;
+	private: System::Windows::Forms::Label^  lblWS23;
 
 
-private: System::Windows::Forms::Label^  lblWS22;
+	private: System::Windows::Forms::Label^  lblWS22;
 
-private: System::Windows::Forms::Label^  lblWS21;
+	private: System::Windows::Forms::Label^  lblWS21;
 
-private: System::Windows::Forms::Label^  lblWS20;
+	private: System::Windows::Forms::Label^  lblWS20;
 
-private: System::Windows::Forms::Label^  lblWS19;
+	private: System::Windows::Forms::Label^  lblWS19;
 
-private: System::Windows::Forms::Label^  lblWS18;
+	private: System::Windows::Forms::Label^  lblWS18;
 
-private: System::Windows::Forms::Label^  lblWS17;
+	private: System::Windows::Forms::Label^  lblWS17;
 
-private: System::Windows::Forms::Label^  lblWS16;
+	private: System::Windows::Forms::Label^  lblWS16;
 
-private: System::Windows::Forms::Label^  lblWS15;
+	private: System::Windows::Forms::Label^  lblWS15;
 
-private: System::Windows::Forms::Label^  lblWS14;
+	private: System::Windows::Forms::Label^  lblWS14;
 
 
-private: System::Windows::Forms::Label^  lblWS13;
+	private: System::Windows::Forms::Label^  lblWS13;
 
-private: System::Windows::Forms::Label^  lblWS12;
+	private: System::Windows::Forms::Label^  lblWS12;
 
-private: System::Windows::Forms::Label^  lblWS11;
+	private: System::Windows::Forms::Label^  lblWS11;
 
-private: System::Windows::Forms::Label^  lblWS10;
+	private: System::Windows::Forms::Label^  lblWS10;
 
-private: System::Windows::Forms::Label^  lblWS9;
+	private: System::Windows::Forms::Label^  lblWS9;
 
-private: System::Windows::Forms::Label^  lblWS8;
+	private: System::Windows::Forms::Label^  lblWS8;
 
-private: System::Windows::Forms::Label^  lblWS7;
+	private: System::Windows::Forms::Label^  lblWS7;
 
-private: System::Windows::Forms::Label^  lblWS6;
+	private: System::Windows::Forms::Label^  lblWS6;
 
-private: System::Windows::Forms::Label^  lblWS5;
+	private: System::Windows::Forms::Label^  lblWS5;
 
-private: System::Windows::Forms::Label^  lblWS4;
+	private: System::Windows::Forms::Label^  lblWS4;
 
-private: System::Windows::Forms::Label^  lblWS3;
+	private: System::Windows::Forms::Label^  lblWS3;
 
-private: System::Windows::Forms::Label^  lblWS2;
+	private: System::Windows::Forms::Label^  lblWS2;
 
-private: System::Windows::Forms::Label^  lblWS1;
-private: System::Windows::Forms::Label^  lblErrorMsg;
-private: System::Windows::Forms::Timer^  LoadTimer;
-private: System::Windows::Forms::Label^  lblAthClass;
-private: System::Windows::Forms::Label^  lblAtS34;
-private: System::Windows::Forms::Label^  lblAtS33;
-private: System::Windows::Forms::Label^  lblAtS32;
-private: System::Windows::Forms::Label^  lblAtS31;
-private: System::Windows::Forms::Label^  lblAtS30;
-private: System::Windows::Forms::Label^  lblAtS29;
-private: System::Windows::Forms::Label^  lblAtS27;
-private: System::Windows::Forms::Label^  lblAtS26;
-private: System::Windows::Forms::Label^  lblAtS28;
-private: System::Windows::Forms::Label^  lblAtS25;
-private: System::Windows::Forms::Label^  lblAtS24;
-private: System::Windows::Forms::Label^  lblAtS23;
-private: System::Windows::Forms::Label^  lblAtS22;
-private: System::Windows::Forms::Label^  lblAtS21;
-private: System::Windows::Forms::Label^  lblAtS20;
-private: System::Windows::Forms::Label^  lblAtS19;
-private: System::Windows::Forms::Label^  lblAtS18;
-private: System::Windows::Forms::Label^  lblAtS17;
-private: System::Windows::Forms::Label^  lblAtS16;
-private: System::Windows::Forms::Label^  lblAtS15;
-private: System::Windows::Forms::Label^  lblAtS14;
-private: System::Windows::Forms::Label^  lblAtS13;
-private: System::Windows::Forms::Label^  lblAtS12;
-private: System::Windows::Forms::Label^  lblAtS11;
-private: System::Windows::Forms::Label^  lblAtS10;
-private: System::Windows::Forms::Label^  lblAtS9;
-private: System::Windows::Forms::Label^  lblAtS8;
-private: System::Windows::Forms::Label^  lblAtS7;
-private: System::Windows::Forms::Label^  lblAtS6;
-private: System::Windows::Forms::Label^  lblAtS5;
-private: System::Windows::Forms::Label^  lblAtS4;
-private: System::Windows::Forms::Label^  lblAtS3;
-private: System::Windows::Forms::Label^  lblAtS2;
-private: System::Windows::Forms::Label^  lblAtS1;
-private: System::Windows::Forms::Label^  lblNClass;
-private: System::Windows::Forms::Label^  lblNS34;
+	private: System::Windows::Forms::Label^  lblWS1;
+	private: System::Windows::Forms::Label^  lblErrorMsg;
+	private: System::Windows::Forms::Timer^  LoadTimer;
+	private: System::Windows::Forms::Label^  lblAthClass;
+	private: System::Windows::Forms::Label^  lblAtS34;
+	private: System::Windows::Forms::Label^  lblAtS33;
+	private: System::Windows::Forms::Label^  lblAtS32;
+	private: System::Windows::Forms::Label^  lblAtS31;
+	private: System::Windows::Forms::Label^  lblAtS30;
+	private: System::Windows::Forms::Label^  lblAtS29;
+	private: System::Windows::Forms::Label^  lblAtS27;
+	private: System::Windows::Forms::Label^  lblAtS26;
+	private: System::Windows::Forms::Label^  lblAtS28;
+	private: System::Windows::Forms::Label^  lblAtS25;
+	private: System::Windows::Forms::Label^  lblAtS24;
+	private: System::Windows::Forms::Label^  lblAtS23;
+	private: System::Windows::Forms::Label^  lblAtS22;
+	private: System::Windows::Forms::Label^  lblAtS21;
+	private: System::Windows::Forms::Label^  lblAtS20;
+	private: System::Windows::Forms::Label^  lblAtS19;
+	private: System::Windows::Forms::Label^  lblAtS18;
+	private: System::Windows::Forms::Label^  lblAtS17;
+	private: System::Windows::Forms::Label^  lblAtS16;
+	private: System::Windows::Forms::Label^  lblAtS15;
+	private: System::Windows::Forms::Label^  lblAtS14;
+	private: System::Windows::Forms::Label^  lblAtS13;
+	private: System::Windows::Forms::Label^  lblAtS12;
+	private: System::Windows::Forms::Label^  lblAtS11;
+	private: System::Windows::Forms::Label^  lblAtS10;
+	private: System::Windows::Forms::Label^  lblAtS9;
+	private: System::Windows::Forms::Label^  lblAtS8;
+	private: System::Windows::Forms::Label^  lblAtS7;
+	private: System::Windows::Forms::Label^  lblAtS6;
+	private: System::Windows::Forms::Label^  lblAtS5;
+	private: System::Windows::Forms::Label^  lblAtS4;
+	private: System::Windows::Forms::Label^  lblAtS3;
+	private: System::Windows::Forms::Label^  lblAtS2;
+	private: System::Windows::Forms::Label^  lblAtS1;
+	private: System::Windows::Forms::Label^  lblNClass;
+	private: System::Windows::Forms::Label^  lblNS34;
 
-private: System::Windows::Forms::Label^  lblNS33;
+	private: System::Windows::Forms::Label^  lblNS33;
 
-private: System::Windows::Forms::Label^  lblNS32;
+	private: System::Windows::Forms::Label^  lblNS32;
 
-private: System::Windows::Forms::Label^  lblNS31;
+	private: System::Windows::Forms::Label^  lblNS31;
 
-private: System::Windows::Forms::Label^  lblNS30;
+	private: System::Windows::Forms::Label^  lblNS30;
 
-private: System::Windows::Forms::Label^  lblNS29;
+	private: System::Windows::Forms::Label^  lblNS29;
 
-private: System::Windows::Forms::Label^  lblNS28;
+	private: System::Windows::Forms::Label^  lblNS28;
 
-private: System::Windows::Forms::Label^  lblNS27;
+	private: System::Windows::Forms::Label^  lblNS27;
 
-private: System::Windows::Forms::Label^  lblNS4;
-private: System::Windows::Forms::Label^  lblNS26;
+	private: System::Windows::Forms::Label^  lblNS4;
+	private: System::Windows::Forms::Label^  lblNS26;
 
-private: System::Windows::Forms::Label^  lblNS25;
+	private: System::Windows::Forms::Label^  lblNS25;
 
-private: System::Windows::Forms::Label^  lblNS24;
+	private: System::Windows::Forms::Label^  lblNS24;
 
-private: System::Windows::Forms::Label^  lblNS23;
+	private: System::Windows::Forms::Label^  lblNS23;
 
-private: System::Windows::Forms::Label^  lblNS22;
+	private: System::Windows::Forms::Label^  lblNS22;
 
-private: System::Windows::Forms::Label^  lblNS21;
+	private: System::Windows::Forms::Label^  lblNS21;
 
-private: System::Windows::Forms::Label^  lblNS20;
+	private: System::Windows::Forms::Label^  lblNS20;
 
-private: System::Windows::Forms::Label^  lblNS19;
+	private: System::Windows::Forms::Label^  lblNS19;
 
-private: System::Windows::Forms::Label^  lblNS18;
+	private: System::Windows::Forms::Label^  lblNS18;
 
-private: System::Windows::Forms::Label^  lblNS17;
+	private: System::Windows::Forms::Label^  lblNS17;
 
-private: System::Windows::Forms::Label^  lblNS16;
+	private: System::Windows::Forms::Label^  lblNS16;
 
-private: System::Windows::Forms::Label^  lblNS15;
+	private: System::Windows::Forms::Label^  lblNS15;
 
-private: System::Windows::Forms::Label^  lblNS14;
+	private: System::Windows::Forms::Label^  lblNS14;
 
-private: System::Windows::Forms::Label^  lblNS13;
+	private: System::Windows::Forms::Label^  lblNS13;
 
-private: System::Windows::Forms::Label^  lblNS12;
-private: System::Windows::Forms::Label^  lblNS11;
-private: System::Windows::Forms::Label^  lblNS10;
-private: System::Windows::Forms::Label^  lblNS9;
-private: System::Windows::Forms::Label^  lblNS8;
-private: System::Windows::Forms::Label^  lblNS7;
-private: System::Windows::Forms::Label^  lblNS6;
-private: System::Windows::Forms::Label^  lblNS5;
-private: System::Windows::Forms::Label^  lblNS3;
-private: System::Windows::Forms::Label^  lblNS2;
-private: System::Windows::Forms::Label^  lblNS1;
-private: System::Windows::Forms::Label^  lblJClass;
-private: System::Windows::Forms::Label^  lblJS38;
-private: System::Windows::Forms::Label^  lblJS37;
+	private: System::Windows::Forms::Label^  lblNS12;
+	private: System::Windows::Forms::Label^  lblNS11;
+	private: System::Windows::Forms::Label^  lblNS10;
+	private: System::Windows::Forms::Label^  lblNS9;
+	private: System::Windows::Forms::Label^  lblNS8;
+	private: System::Windows::Forms::Label^  lblNS7;
+	private: System::Windows::Forms::Label^  lblNS6;
+	private: System::Windows::Forms::Label^  lblNS5;
+	private: System::Windows::Forms::Label^  lblNS3;
+	private: System::Windows::Forms::Label^  lblNS2;
+	private: System::Windows::Forms::Label^  lblNS1;
+	private: System::Windows::Forms::Label^  lblJClass;
+	private: System::Windows::Forms::Label^  lblJS38;
+	private: System::Windows::Forms::Label^  lblJS37;
 
 
 
 
-private: System::Windows::Forms::Label^  lblJS35;
+	private: System::Windows::Forms::Label^  lblJS35;
 
-private: System::Windows::Forms::Label^  lblJS34;
+	private: System::Windows::Forms::Label^  lblJS34;
 
-private: System::Windows::Forms::Label^  lblJS33;
+	private: System::Windows::Forms::Label^  lblJS33;
 
-private: System::Windows::Forms::Label^  lblJS32;
+	private: System::Windows::Forms::Label^  lblJS32;
 
-private: System::Windows::Forms::Label^  lblJS31;
+	private: System::Windows::Forms::Label^  lblJS31;
 
-private: System::Windows::Forms::Label^  lblJS30;
-private: System::Windows::Forms::Label^  lblJS36;
+	private: System::Windows::Forms::Label^  lblJS30;
+	private: System::Windows::Forms::Label^  lblJS36;
 
 
-private: System::Windows::Forms::Label^  lblJS29;
+	private: System::Windows::Forms::Label^  lblJS29;
 
-private: System::Windows::Forms::Label^  lblJS28;
+	private: System::Windows::Forms::Label^  lblJS28;
 
-private: System::Windows::Forms::Label^  lblJS27;
+	private: System::Windows::Forms::Label^  lblJS27;
 
-private: System::Windows::Forms::Label^  lblJS26;
+	private: System::Windows::Forms::Label^  lblJS26;
 
-private: System::Windows::Forms::Label^  lblJS25;
+	private: System::Windows::Forms::Label^  lblJS25;
 
-private: System::Windows::Forms::Label^  lblJS23;
+	private: System::Windows::Forms::Label^  lblJS23;
 
-private: System::Windows::Forms::Label^  lblJS22;
+	private: System::Windows::Forms::Label^  lblJS22;
 
-private: System::Windows::Forms::Label^  lblJS21;
+	private: System::Windows::Forms::Label^  lblJS21;
 
-private: System::Windows::Forms::Label^  lblJS20;
+	private: System::Windows::Forms::Label^  lblJS20;
 
-private: System::Windows::Forms::Label^  lblJS19;
+	private: System::Windows::Forms::Label^  lblJS19;
 
-private: System::Windows::Forms::Label^  lblJS18;
+	private: System::Windows::Forms::Label^  lblJS18;
 
-private: System::Windows::Forms::Label^  lblJS16;
+	private: System::Windows::Forms::Label^  lblJS16;
 
-private: System::Windows::Forms::Label^  lblJS15;
+	private: System::Windows::Forms::Label^  lblJS15;
 
-private: System::Windows::Forms::Label^  lblJS14;
+	private: System::Windows::Forms::Label^  lblJS14;
 
-private: System::Windows::Forms::Label^  lblJS13;
+	private: System::Windows::Forms::Label^  lblJS13;
 
-private: System::Windows::Forms::Label^  lblJS12;
+	private: System::Windows::Forms::Label^  lblJS12;
 
-private: System::Windows::Forms::Label^  lblJS11;
+	private: System::Windows::Forms::Label^  lblJS11;
 
-private: System::Windows::Forms::Label^  lblJS10;
+	private: System::Windows::Forms::Label^  lblJS10;
 
-private: System::Windows::Forms::Label^  lblJS9;
+	private: System::Windows::Forms::Label^  lblJS9;
 
-private: System::Windows::Forms::Label^  lblJS8;
+	private: System::Windows::Forms::Label^  lblJS8;
 
-private: System::Windows::Forms::Label^  lblJS6;
+	private: System::Windows::Forms::Label^  lblJS6;
 
-private: System::Windows::Forms::Label^  lblJS5;
+	private: System::Windows::Forms::Label^  lblJS5;
 
-private: System::Windows::Forms::Label^  lblJS3;
+	private: System::Windows::Forms::Label^  lblJS3;
 
-private: System::Windows::Forms::Label^  lblJS2;
+	private: System::Windows::Forms::Label^  lblJS2;
 
-private: System::Windows::Forms::Label^  lblJS1;
-private: System::Windows::Forms::Label^  lblAuS4;
-private: System::Windows::Forms::Label^  lblAuS16;
-private: System::Windows::Forms::Label^  lblAuS26;
+	private: System::Windows::Forms::Label^  lblJS1;
+	private: System::Windows::Forms::Label^  lblAuS4;
+	private: System::Windows::Forms::Label^  lblAuS16;
+	private: System::Windows::Forms::Label^  lblAuS26;
 
 
 
 
-private: System::Windows::Forms::Label^  lblAurClass;
-private: System::Windows::Forms::Label^  lblAuS37;
+	private: System::Windows::Forms::Label^  lblAurClass;
+	private: System::Windows::Forms::Label^  lblAuS37;
 
 
-private: System::Windows::Forms::Label^  lblAuS36;
+	private: System::Windows::Forms::Label^  lblAuS36;
 
-private: System::Windows::Forms::Label^  lblAuS35;
+	private: System::Windows::Forms::Label^  lblAuS35;
 
-private: System::Windows::Forms::Label^  lblAuS34;
+	private: System::Windows::Forms::Label^  lblAuS34;
 
-private: System::Windows::Forms::Label^  lblAuS33;
+	private: System::Windows::Forms::Label^  lblAuS33;
 
-private: System::Windows::Forms::Label^  lblAuS32;
+	private: System::Windows::Forms::Label^  lblAuS32;
 
-private: System::Windows::Forms::Label^  lblAuS31;
+	private: System::Windows::Forms::Label^  lblAuS31;
 
-private: System::Windows::Forms::Label^  lblAuS30;
+	private: System::Windows::Forms::Label^  lblAuS30;
 
-private: System::Windows::Forms::Label^  lblAuS29;
+	private: System::Windows::Forms::Label^  lblAuS29;
 
-private: System::Windows::Forms::Label^  lblAuS28;
+	private: System::Windows::Forms::Label^  lblAuS28;
 
-private: System::Windows::Forms::Label^  lblAuS27;
+	private: System::Windows::Forms::Label^  lblAuS27;
 
-private: System::Windows::Forms::Label^  lblAuS25;
+	private: System::Windows::Forms::Label^  lblAuS25;
 
-private: System::Windows::Forms::Label^  lblAuS24;
+	private: System::Windows::Forms::Label^  lblAuS24;
 
-private: System::Windows::Forms::Label^  lblAuS23;
+	private: System::Windows::Forms::Label^  lblAuS23;
 
-private: System::Windows::Forms::Label^  lblAuS22;
+	private: System::Windows::Forms::Label^  lblAuS22;
 
-private: System::Windows::Forms::Label^  lblAuS21;
+	private: System::Windows::Forms::Label^  lblAuS21;
 
-private: System::Windows::Forms::Label^  lblAuS20;
+	private: System::Windows::Forms::Label^  lblAuS20;
 
-private: System::Windows::Forms::Label^  lblAuS19;
+	private: System::Windows::Forms::Label^  lblAuS19;
 
-private: System::Windows::Forms::Label^  lblAuS18;
+	private: System::Windows::Forms::Label^  lblAuS18;
 
-private: System::Windows::Forms::Label^  lblAuS17;
+	private: System::Windows::Forms::Label^  lblAuS17;
 
-private: System::Windows::Forms::Label^  lblAuS15;
+	private: System::Windows::Forms::Label^  lblAuS15;
 
-private: System::Windows::Forms::Label^  lblAuS14;
+	private: System::Windows::Forms::Label^  lblAuS14;
 
-private: System::Windows::Forms::Label^  lblAuS13;
+	private: System::Windows::Forms::Label^  lblAuS13;
 
-private: System::Windows::Forms::Label^  lblAuS12;
+	private: System::Windows::Forms::Label^  lblAuS12;
 
-private: System::Windows::Forms::Label^  lblAuS11;
+	private: System::Windows::Forms::Label^  lblAuS11;
 
-private: System::Windows::Forms::Label^  lblAuS10;
+	private: System::Windows::Forms::Label^  lblAuS10;
 
-private: System::Windows::Forms::Label^  lblAuS9;
+	private: System::Windows::Forms::Label^  lblAuS9;
 
-private: System::Windows::Forms::Label^  lblAuS8;
+	private: System::Windows::Forms::Label^  lblAuS8;
 
-private: System::Windows::Forms::Label^  lblAuS7;
+	private: System::Windows::Forms::Label^  lblAuS7;
 
-private: System::Windows::Forms::Label^  lblAuS6;
+	private: System::Windows::Forms::Label^  lblAuS6;
 
-private: System::Windows::Forms::Label^  lblAuS5;
+	private: System::Windows::Forms::Label^  lblAuS5;
 
-private: System::Windows::Forms::Label^  lblAuS3;
+	private: System::Windows::Forms::Label^  lblAuS3;
 
-private: System::Windows::Forms::Label^  lblAuS2;
+	private: System::Windows::Forms::Label^  lblAuS2;
 
-private: System::Windows::Forms::Label^  lblAuS1;
+	private: System::Windows::Forms::Label^  lblAuS1;
 
-private: System::Windows::Forms::Label^  lblJS24;
+	private: System::Windows::Forms::Label^  lblJS24;
 
-private: System::Windows::Forms::Label^  lblJS17;
+	private: System::Windows::Forms::Label^  lblJS17;
 
-private: System::Windows::Forms::Label^  lblJS7;
+	private: System::Windows::Forms::Label^  lblJS7;
 
-private: System::Windows::Forms::Label^  lblJS4;
-private: System::Windows::Forms::GroupBox^  gbSkills;
-private: System::Windows::Forms::Label^  lblLoadSP;
-private: System::Windows::Forms::Label^  lblCDTimer;
-private: System::Windows::Forms::Label^  lblSkillPoints;
-private: System::Windows::Forms::Label^  lblLoadCDTimer;
+	private: System::Windows::Forms::Label^  lblJS4;
+	private: System::Windows::Forms::GroupBox^  gbSkills;
+	private: System::Windows::Forms::Label^  lblLoadSP;
+	private: System::Windows::Forms::Label^  lblCDTimer;
+	private: System::Windows::Forms::Label^  lblSkillPoints;
+	private: System::Windows::Forms::Label^  lblLoadCDTimer;
+	private: System::Windows::Forms::TabPage^  tpCheats;
+	private: System::Windows::Forms::CheckBox^  ckbxGodMode;
+	private: System::Windows::Forms::CheckBox^  ckbxuBkPk;
+	private: System::Windows::Forms::Timer^  bkpkTimer;
+	private: System::Windows::Forms::Timer^  godmodeTimer;
 
-private: System::ComponentModel::IContainer^  components;
+	private: System::ComponentModel::IContainer^  components;
 
 
 
@@ -764,8 +747,13 @@ private: System::ComponentModel::IContainer^  components;
 			this->lblAuS3 = (gcnew System::Windows::Forms::Label());
 			this->lblAuS2 = (gcnew System::Windows::Forms::Label());
 			this->lblAuS1 = (gcnew System::Windows::Forms::Label());
+			this->tpCheats = (gcnew System::Windows::Forms::TabPage());
+			this->ckbxGodMode = (gcnew System::Windows::Forms::CheckBox());
+			this->ckbxuBkPk = (gcnew System::Windows::Forms::CheckBox());
 			this->lblErrorMsg = (gcnew System::Windows::Forms::Label());
 			this->LoadTimer = (gcnew System::Windows::Forms::Timer(this->components));
+			this->bkpkTimer = (gcnew System::Windows::Forms::Timer(this->components));
+			this->godmodeTimer = (gcnew System::Windows::Forms::Timer(this->components));
 			this->tcMain->SuspendLayout();
 			this->tpStats->SuspendLayout();
 			this->gbSkills->SuspendLayout();
@@ -781,12 +769,14 @@ private: System::ComponentModel::IContainer^  components;
 			this->tpNisha->SuspendLayout();
 			this->tpJack->SuspendLayout();
 			this->tpAurelia->SuspendLayout();
+			this->tpCheats->SuspendLayout();
 			this->SuspendLayout();
 			// 
 			// tcMain
 			// 
 			this->tcMain->Controls->Add(this->tpStats);
 			this->tcMain->Controls->Add(this->tpSkills);
+			this->tcMain->Controls->Add(this->tpCheats);
 			this->tcMain->Location = System::Drawing::Point(12, 12);
 			this->tcMain->Name = L"tcMain";
 			this->tcMain->SelectedIndex = 0;
@@ -3752,6 +3742,39 @@ private: System::ComponentModel::IContainer^  components;
 			this->lblAuS1->TextAlign = System::Drawing::ContentAlignment::MiddleRight;
 			this->lblAuS1->MouseClick += gcnew System::Windows::Forms::MouseEventHandler(this, &Borderlands_TPS::clickSkill);
 			// 
+			// tpCheats
+			// 
+			this->tpCheats->Controls->Add(this->ckbxGodMode);
+			this->tpCheats->Controls->Add(this->ckbxuBkPk);
+			this->tpCheats->Location = System::Drawing::Point(4, 22);
+			this->tpCheats->Name = L"tpCheats";
+			this->tpCheats->Size = System::Drawing::Size(544, 360);
+			this->tpCheats->TabIndex = 2;
+			this->tpCheats->Text = L"Cheats";
+			this->tpCheats->UseVisualStyleBackColor = true;
+			// 
+			// ckbxGodMode
+			// 
+			this->ckbxGodMode->AutoSize = true;
+			this->ckbxGodMode->Location = System::Drawing::Point(31, 66);
+			this->ckbxGodMode->Name = L"ckbxGodMode";
+			this->ckbxGodMode->Size = System::Drawing::Size(76, 17);
+			this->ckbxGodMode->TabIndex = 1;
+			this->ckbxGodMode->Text = L"God Mode";
+			this->ckbxGodMode->UseVisualStyleBackColor = true;
+			this->ckbxGodMode->CheckedChanged += gcnew System::EventHandler(this, &Borderlands_TPS::ckbxGodMode_CheckedChanged);
+			// 
+			// ckbxuBkPk
+			// 
+			this->ckbxuBkPk->AutoSize = true;
+			this->ckbxuBkPk->Location = System::Drawing::Point(31, 33);
+			this->ckbxuBkPk->Name = L"ckbxuBkPk";
+			this->ckbxuBkPk->Size = System::Drawing::Size(121, 17);
+			this->ckbxuBkPk->TabIndex = 0;
+			this->ckbxuBkPk->Text = L"Unlimited Backpack";
+			this->ckbxuBkPk->UseVisualStyleBackColor = true;
+			this->ckbxuBkPk->CheckedChanged += gcnew System::EventHandler(this, &Borderlands_TPS::ckbxuBkPk_CheckedChanged);
+			// 
 			// lblErrorMsg
 			// 
 			this->lblErrorMsg->AutoSize = true;
@@ -3763,6 +3786,14 @@ private: System::ComponentModel::IContainer^  components;
 			// LoadTimer
 			// 
 			this->LoadTimer->Tick += gcnew System::EventHandler(this, &Borderlands_TPS::LoadTimer_Tick);
+			// 
+			// bkpkTimer
+			// 
+			this->bkpkTimer->Tick += gcnew System::EventHandler(this, &Borderlands_TPS::bkpkTimer_Tick);
+			// 
+			// godmodeTimer
+			// 
+			this->godmodeTimer->Tick += gcnew System::EventHandler(this, &Borderlands_TPS::godmodeTimer_Tick);
 			// 
 			// Borderlands_TPS
 			// 
@@ -3795,289 +3826,26 @@ private: System::ComponentModel::IContainer^  components;
 			this->tpNisha->ResumeLayout(false);
 			this->tpJack->ResumeLayout(false);
 			this->tpAurelia->ResumeLayout(false);
+			this->tpCheats->ResumeLayout(false);
+			this->tpCheats->PerformLayout();
 			this->ResumeLayout(false);
 			this->PerformLayout();
 
 		}
 #pragma endregion
-private: System::Void Borderlands_TPS_Load(System::Object^  sender, System::EventArgs^  e)
-{
-	if (!bltpsWindow)
-	{
-		lblErrorMsg->Text = "Borderlands: The Pre-Sequel Window not found.";
-	}
-	else
-	{
-		GetWindowThreadProcessId(bltpsWindow, &pid);
-		hProcess = OpenProcess(PROCESS_ALL_ACCESS, FALSE, pid);
-
-		if (!hProcess)
-		{
-			lblErrorMsg->Text = "Can't open the process";
-		}
-		else
-		{
-			baseAddress = dwGetModuleBaseAddress(pid, _T("BorderlandsPreSequel.exe"));
-			readMemory(hProcess, baseAddress, offset1, stats, 8);
-			readMemory(hProcess, baseAddress, offset1, stats2, 7);
-			readMemory(hProcess, baseAddress, offset1, stats3, 3);
-			readMemory(hProcess, baseAddress, offset1 - 0xC, goldKeys, 4);
-			readMemory(hProcess, baseAddress, offset1, skillPoints, 1);
-			readMemory(hProcess, baseAddress, offset1, skillCDTimer, 1);
-			readSkillsMemory(hProcess, baseAddress, offset1, loadSkills, 39);
-			//readMemory(hProcess, baseAddress, offset1, skills, 39);
-
-			if (!ReadProcessMemory(hProcess, (void*)stats[0][1], &stats[0][0], sizeof(stats[0][0]), NULL))
-			{
-				lblErrorMsg->Text = "Failed to read memory.";
-			}
-			else
-			{
-				loadMemory();
-				LoadTimer->Start();
-			}
-		}
-	}
-}
-private: System::Void loadMemory()
-{
-	lblLoadMoney->Text = "" + stats[0][0];
-	lblLoadMShards->Text = "" + stats[1][0];
-	lblLoadCredits->Text = "" + stats[2][0];
-	lblLoadNextLevel->Text = "" + stats[3][0];
-	lblLoadWD->Text = "" + stats[4][0];
-	lblLoadBkPk->Text = "" + stats[5][0];
-	
-	//health, shield, and oz values are of type FLOAT
-	float health = 0;
-	ReadProcessMemory(hProcess, (void*)stats2[0][1], &health, sizeof(health), NULL);
-	lblLoadHealth->Text = "" + health;
-	float shield;
-	ReadProcessMemory(hProcess, (void*)stats2[2][1], &shield, sizeof(shield), NULL);
-	lblLoadShield->Text = "" + shield;
-	float oz;
-	ReadProcessMemory(hProcess, (void*)stats2[4][1], &oz, sizeof(oz), NULL);
-	lblLoadOz->Text = "" + oz;
-
-	lblLoadBank->Text = "" + stats2[6][0];
-	lblLoadLevel->Text = "" + stats3[0][0];
-
-	float exp;
-	ReadProcessMemory(hProcess, (void*)stats3[1][1], &exp, sizeof(exp), NULL);
-	lblLoadExp->Text = "" + exp;
-	float expMult;
-	ReadProcessMemory(hProcess, (void*)stats3[2][1], &expMult, sizeof(expMult), NULL);
-	lblLoadExpMult->Text = "" + expMult;
-	
-	//golden key values are of type BYTE
-	byte bUsed;
-	ReadProcessMemory(hProcess, (void*)goldKeys[0][1], &bUsed, sizeof(bUsed), NULL);
-	lblLoadBaseUsed->Text = "" + bUsed;
-	byte sUsed;
-	ReadProcessMemory(hProcess, (void*)goldKeys[1][1], &sUsed, sizeof(sUsed), NULL);
-	lblLoadShiftUsed->Text = "" + sUsed;
-	byte bTotal;
-	ReadProcessMemory(hProcess, (void*)goldKeys[2][1], &bTotal, sizeof(bTotal), NULL);
-	lblLoadBaseTotal->Text = "" + bTotal;
-	byte sTotal;
-	ReadProcessMemory(hProcess, (void*)goldKeys[3][1], &sTotal, sizeof(sTotal), NULL);
-	lblLoadShiftTotal->Text = "" + sTotal;
-
-	lblLoadSP->Text = "" + skillPoints[0][0];
-	
-	//skill cooldown timer value is of type FLOAT
-	float cdTimer;
-	ReadProcessMemory(hProcess, (void*)skillCDTimer[0][1], &cdTimer, sizeof(cdTimer), NULL);
-	lblLoadCDTimer->Text = "" + cdTimer;
-
-	lblCTClass->Text = "" + loadSkills[0][0];
-	lblWilClass->Text = "" + loadSkills[0][0];
-	lblAthClass->Text = "" + loadSkills[0][0];
-	lblNClass->Text = "" + loadSkills[0][0];
-	lblJClass->Text = "" + loadSkills[0][0];
-	lblAurClass->Text = "" + loadSkills[0][0];
-
-	displaySkills("lblCS", "tpClaptrap", 36);	
-	displaySkills("lblWS", "tpWilhelm", 33);
-	displaySkills("lblAtS", "tpAthena", 34);
-	displaySkills("lblNS", "tpNisha", 34);
-	displaySkills("lblJS", "tpJack", 38);
-	displaySkills("lblAuS", "tpAurelia", 37);
-}
+private: System::Void Borderlands_TPS_Load(System::Object^  sender, System::EventArgs^  e);
+private: System::Void loadMemory();
 //Function to load the skills
 //allows reusablitiy for all of the tabs instead of having to load each one individually
-private: System::Void displaySkills(System::String^ Name, System::String^ tabPage, int noOfSkills)
-{
-	int i = 1;
-	for each(Control^ tab in tcClasses->Controls)
-	{
-		if (tab->Name == tabPage)
-		{
-			for (int i = 1; i < noOfSkills + 1; i++)
-			{
-				for each (Control^ con in tab->Controls)
-				{
-					if (con->Name == (Name + i))
-					{
-						con->Text = "" + loadSkills[i][0];
-						break;
-					}
-				}
-			}
-			break;
-		}
-	}
-}
+private: System::Void displaySkills(System::String^ Name, System::String^ tabPage, int noOfSkills);
 //FUnction to get input from the user to write to memory
-private: System::Void writeMemory(System::Object^  sender, System::EventArgs^  e)
-{
-	String^ tbName = safe_cast<Label^>(sender)->Name;
-	int i = -1;	//variable to store the value from the event sending label
-	int j = 0;	//variable used to get the right memory address
-	float k = 0.0;	//variable used to store float value in from the event sending label
-	byte b = -1;	//variable used to store byte value in form the event sending label
-	bool found = false;
-
-	getInput(sender); //gets the input data
-
-	//determines where the event call came from
-	for each (Control^ group in tpStats->Controls)
-	{
-		if (group->GetType() == GroupBox::typeid)
-		{
-			for each (Control^ con in group->Controls)
-			{
-				if (con->Name == tbName)
-				{
-					if (con->Name == "lblLoadHealth" || con->Name == "lblLoadShield"
-						|| con->Name == "lblLoadOz" || con->Name == "lblLoadCDTimer" || con->Name == "lblLoadExp" || con->Name == "lblLoadExpMult")
-					{
-						k = float::Parse(safe_cast<Label^>(sender)->Text);
-						j = safe_cast<Label ^>(sender)->TabIndex;
-						break;
-					}
-					else if (con->Name == "lblLoadBaseUsed" || con->Name == "lblLoadShiftUsed" || con->Name == "lblLoadBaseTotal" || con->Name == "lblLoadShiftTotal")
-					{
-						b = byte::Parse(safe_cast<Label^>(sender)->Text);
-						j = safe_cast<Label ^>(sender)->TabIndex;
-						break;
-					}
-					else
-					{
-						i = int::Parse(safe_cast<Label^>(sender)->Text);
-						j = safe_cast<Label ^>(sender)->TabIndex;
-						break;
-					}
-					found = true;
-				}
-			}
-			if (found)
-			{
-				break;
-			}
-		}
-	}
-
-	//update the memory with the input
-	if (i > -1)
-	{
-		if (j < 8)
-		{
-			WriteProcessMemory(hProcess, (void*)stats[j - 1][1], (void*)&i, (DWORD)sizeof(i), NULL);	//write to memory
-		}
-		else if (j == 15) //if updating the bank size
-		{
-			WriteProcessMemory(hProcess, (void*)stats2[6][1], (void*)&i, (DWORD)sizeof(i), NULL);	//write to memory
-		}
-		else if (j == 16) //if updating level
-		{
-			WriteProcessMemory(hProcess, (void*)stats3[0][1], (void*)&i, (DWORD)sizeof(i), NULL);	//write to memory
-		}
-		else if (j == 500) //if updating skill points
-		{
-			WriteProcessMemory(hProcess, (void*)skillPoints[0][1], (void*)&i, (DWORD)sizeof(i), NULL);	//write to memory
-		}
-	}
-	else if (k > -1)
-	{
-		if (j == 501) //if updating the skill cooldown timer
-		{
-			WriteProcessMemory(hProcess, (void*)skillCDTimer[0][1], (void*)&k, (DWORD)sizeof(k), NULL);	//write to memory
-		}
-		else if (j == 17 || j == 18)
-		{
-			WriteProcessMemory(hProcess, (void*)stats3[j - 16][1], (void*)&k, (DWORD)sizeof(k), NULL);	//write to memory
-		}
-		else //if updating health, shield or oz values
-		{
-			WriteProcessMemory(hProcess, (void*)stats2[j - 9][1], (void*)&k, (DWORD)sizeof(k), NULL);	//write to memory
-		}
-	}
-	if (b > -1) //if updating golden key values
-	{
-		WriteProcessMemory(hProcess, (void*)goldKeys[j - 19][1], (void*)&b, (BYTE)sizeof(b), NULL);	//write to memory
-	}
-}
-//Function to call inputBox
-void getInput(System::Object^  sender)
-{
-   inputBox^ input = gcnew inputBox;
-   //display the input box
-   input->ShowDialog();
-   if (input->textBox1->Text != "")
-   {
-	   safe_cast<Label^>(sender)->Text = input->textBox1->Text;
-   }
-
-   delete input;
-}
-private: System::Void LoadTimer_Tick(System::Object^  sender, System::EventArgs^  e)
-{
-	//Reread the memory values
-	for (int i = 0; i < 8; i++)
-	{
-		ReadProcessMemory(hProcess, (void*)stats[i][1], &stats[i][0], sizeof(stats[i][0]), NULL);
-	}
-	for (int i = 0; i < 7; i++)
-	{
-		ReadProcessMemory(hProcess, (void*)stats2[i][1], &stats2[i][0], sizeof(stats2[i][0]), NULL);
-	}
-	for (int i = 0; i < 3; i++)
-	{
-		ReadProcessMemory(hProcess, (void*)stats3[i][1], &stats3[i][0], sizeof(stats3[i][0]), NULL);
-	}
-	for (int i = 0; i < 4; i++)
-	{
-		ReadProcessMemory(hProcess, (void*)goldKeys[i][1], &goldKeys[i][0], sizeof(goldKeys[i][0]), NULL);
-	}
-	ReadProcessMemory(hProcess, (void*)skillPoints[0][1], &skillPoints[0][0], sizeof(skillPoints[0][0]), NULL);
-	ReadProcessMemory(hProcess, (void*)skillCDTimer[0][1], &skillCDTimer[0][0], sizeof(skillCDTimer[0][0]), NULL);
-	for (int i = 0; i < 39; i++)
-	{
-		ReadProcessMemory(hProcess, (void*)loadSkills[i][1], &loadSkills[i][0], sizeof(loadSkills[i][0]), NULL);
-	}
-	//redisplay the values
-	loadMemory();
-}
-private: System::Void clickSkill(System::Object^  sender, System::Windows::Forms::MouseEventArgs^  e)
-{
-	int increment = int::Parse(safe_cast<Label^>(sender)->Text);
-	int tabIndex = safe_cast<Label^>(sender)->TabIndex;
-	if (e->Button == System::Windows::Forms::MouseButtons::Left)
-	{
-		increment += 1;
-		WriteProcessMemory(hProcess, (void*)loadSkills[tabIndex + 1][1], (void*)&increment, (DWORD)sizeof(increment), NULL);
-
-	}
-	else if (e->Button == System::Windows::Forms::MouseButtons::Right)
-	{
-		if (increment != 0)
-		{
-			increment -= 1;
-			WriteProcessMemory(hProcess, (void*)loadSkills[tabIndex + 1][1], (void*)&increment, (DWORD)sizeof(increment), NULL);
-		}
-	}
-
-}
+private: System::Void writeMemory(System::Object^  sender, System::EventArgs^  e);
+private: System::Void getInput(System::Object^  sender);
+private: System::Void LoadTimer_Tick(System::Object^  sender, System::EventArgs^  e);
+private: System::Void clickSkill(System::Object^  sender, System::Windows::Forms::MouseEventArgs^  e);
+private: System::Void godmodeTimer_Tick(System::Object^  sender, System::EventArgs^  e);
+private: System::Void bkpkTimer_Tick(System::Object^  sender, System::EventArgs^  e);
+private: System::Void ckbxuBkPk_CheckedChanged(System::Object^  sender, System::EventArgs^  e);
+private: System::Void ckbxGodMode_CheckedChanged(System::Object^  sender, System::EventArgs^  e);
 };
 }

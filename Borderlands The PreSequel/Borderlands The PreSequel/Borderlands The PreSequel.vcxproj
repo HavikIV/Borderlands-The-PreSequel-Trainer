@@ -129,6 +129,7 @@
   <ItemGroup>
     <ClCompile Include="Borderlands_TPS.cpp" />
     <ClCompile Include="inputBox.cpp" />
+    <ClCompile Include="main.cpp" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="System" />
