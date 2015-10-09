@@ -15,26 +15,14 @@ namespace BorderlandsThePreSequel {
 	public ref class inputBox : public System::Windows::Forms::Form
 	{
 	public:
-		inputBox(void)
-		{
-			InitializeComponent();
-			//
-			//TODO: Add the constructor code here
-			//
-		}
+		inputBox(void);	//constructor
 		System::Windows::Forms::TextBox^  textBox1;
 
 	protected:
 		/// <summary>
 		/// Clean up any resources being used.
 		/// </summary>
-		~inputBox()
-		{
-			if (components)
-			{
-				delete components;
-			}
-		}
+		~inputBox();	//destructor
 		//private: System::Windows::Forms::TextBox^  textBox1;
 	protected:
 
@@ -79,23 +67,7 @@ namespace BorderlandsThePreSequel {
 
 		}
 #pragma endregion
-	private: System::Void textBox1_KeyPress(System::Object^  sender, System::Windows::Forms::KeyPressEventArgs^  e)
-	{
-		//Only accepts numbers
-		if (!Char::IsDigit(e->KeyChar) && e->KeyChar != 0x08) {
-			e->Handled = true;
-		}
-		else
-		{
-			e->Handled = false;
-		}
-	}
-	private: System::Void textBox1_KeyDown(System::Object^  sender, System::Windows::Forms::KeyEventArgs^  e)
-	{
-		if (e->KeyCode == Keys::Enter)
-		{
-			this->Close();
-		}
-	}
+	private: System::Void textBox1_KeyPress(System::Object^  sender, System::Windows::Forms::KeyPressEventArgs^  e);
+	private: System::Void textBox1_KeyDown(System::Object^  sender, System::Windows::Forms::KeyEventArgs^  e);
 	};
 }

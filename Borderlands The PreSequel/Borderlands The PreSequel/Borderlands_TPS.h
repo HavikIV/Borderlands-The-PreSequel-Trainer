@@ -73,25 +73,16 @@ namespace BorderlandsThePreSequel {
 	private: System::Windows::Forms::TabPage^  tpWilhelm;
 	private: System::Windows::Forms::Label^  lblCS1;
 	private: System::Windows::Forms::TabPage^  tpAthena;
-
 	private: System::Windows::Forms::TabPage^  tpNisha;
 	private: System::Windows::Forms::TabPage^  tpJack;
 	private: System::Windows::Forms::TabPage^  tpAurelia;
 	private: System::Windows::Forms::Label^  lblCS36;
-
 	private: System::Windows::Forms::Label^  lblCS35;
-
 	private: System::Windows::Forms::Label^  lblCS34;
-
 	private: System::Windows::Forms::Label^  lblCS33;
-
 	private: System::Windows::Forms::Label^  lblCS32;
-
 	private: System::Windows::Forms::Label^  lblCS31;
-
-
 	private: System::Windows::Forms::Label^  lblCS30;
-
 	private: System::Windows::Forms::Label^  lblCS29;
 	private: System::Windows::Forms::Label^  lblCS28;
 	private: System::Windows::Forms::Label^  lblCS27;
@@ -123,72 +114,37 @@ namespace BorderlandsThePreSequel {
 	private: System::Windows::Forms::Label^  lblCTClass;
 	private: System::Windows::Forms::Label^  lblWilClass;
 	private: System::Windows::Forms::Label^  lblWS33;
-
 	private: System::Windows::Forms::Label^  lblWS32;
-
 	private: System::Windows::Forms::Label^  lblWS31;
-
 	private: System::Windows::Forms::Label^  lblWS30;
-
 	private: System::Windows::Forms::Label^  lblWS29;
-
 	private: System::Windows::Forms::Label^  lblWS28;
-
 	private: System::Windows::Forms::Label^  lblWS27;
-
 	private: System::Windows::Forms::Label^  lblWS26;
-
 	private: System::Windows::Forms::Label^  lblWS25;
-
-
 	private: System::Windows::Forms::Label^  lblWS24;
-
 	private: System::Windows::Forms::Label^  lblWS23;
-
-
 	private: System::Windows::Forms::Label^  lblWS22;
-
 	private: System::Windows::Forms::Label^  lblWS21;
-
 	private: System::Windows::Forms::Label^  lblWS20;
-
 	private: System::Windows::Forms::Label^  lblWS19;
-
 	private: System::Windows::Forms::Label^  lblWS18;
-
 	private: System::Windows::Forms::Label^  lblWS17;
-
 	private: System::Windows::Forms::Label^  lblWS16;
-
 	private: System::Windows::Forms::Label^  lblWS15;
-
 	private: System::Windows::Forms::Label^  lblWS14;
-
-
 	private: System::Windows::Forms::Label^  lblWS13;
-
 	private: System::Windows::Forms::Label^  lblWS12;
-
 	private: System::Windows::Forms::Label^  lblWS11;
-
 	private: System::Windows::Forms::Label^  lblWS10;
-
 	private: System::Windows::Forms::Label^  lblWS9;
-
 	private: System::Windows::Forms::Label^  lblWS8;
-
 	private: System::Windows::Forms::Label^  lblWS7;
-
 	private: System::Windows::Forms::Label^  lblWS6;
-
 	private: System::Windows::Forms::Label^  lblWS5;
-
 	private: System::Windows::Forms::Label^  lblWS4;
-
 	private: System::Windows::Forms::Label^  lblWS3;
-
 	private: System::Windows::Forms::Label^  lblWS2;
-
 	private: System::Windows::Forms::Label^  lblWS1;
 	private: System::Windows::Forms::Label^  lblErrorMsg;
 	private: System::Windows::Forms::Timer^  LoadTimer;
@@ -229,50 +185,27 @@ namespace BorderlandsThePreSequel {
 	private: System::Windows::Forms::Label^  lblAtS1;
 	private: System::Windows::Forms::Label^  lblNClass;
 	private: System::Windows::Forms::Label^  lblNS34;
-
 	private: System::Windows::Forms::Label^  lblNS33;
-
 	private: System::Windows::Forms::Label^  lblNS32;
-
 	private: System::Windows::Forms::Label^  lblNS31;
-
 	private: System::Windows::Forms::Label^  lblNS30;
-
 	private: System::Windows::Forms::Label^  lblNS29;
-
 	private: System::Windows::Forms::Label^  lblNS28;
-
 	private: System::Windows::Forms::Label^  lblNS27;
-
-	private: System::Windows::Forms::Label^  lblNS4;
 	private: System::Windows::Forms::Label^  lblNS26;
-
 	private: System::Windows::Forms::Label^  lblNS25;
-
 	private: System::Windows::Forms::Label^  lblNS24;
-
 	private: System::Windows::Forms::Label^  lblNS23;
-
 	private: System::Windows::Forms::Label^  lblNS22;
-
 	private: System::Windows::Forms::Label^  lblNS21;
-
 	private: System::Windows::Forms::Label^  lblNS20;
-
 	private: System::Windows::Forms::Label^  lblNS19;
-
 	private: System::Windows::Forms::Label^  lblNS18;
-
 	private: System::Windows::Forms::Label^  lblNS17;
-
 	private: System::Windows::Forms::Label^  lblNS16;
-
 	private: System::Windows::Forms::Label^  lblNS15;
-
 	private: System::Windows::Forms::Label^  lblNS14;
-
 	private: System::Windows::Forms::Label^  lblNS13;
-
 	private: System::Windows::Forms::Label^  lblNS12;
 	private: System::Windows::Forms::Label^  lblNS11;
 	private: System::Windows::Forms::Label^  lblNS10;
@@ -281,163 +214,87 @@ namespace BorderlandsThePreSequel {
 	private: System::Windows::Forms::Label^  lblNS7;
 	private: System::Windows::Forms::Label^  lblNS6;
 	private: System::Windows::Forms::Label^  lblNS5;
+	private: System::Windows::Forms::Label^  lblNS4;
 	private: System::Windows::Forms::Label^  lblNS3;
 	private: System::Windows::Forms::Label^  lblNS2;
 	private: System::Windows::Forms::Label^  lblNS1;
 	private: System::Windows::Forms::Label^  lblJClass;
 	private: System::Windows::Forms::Label^  lblJS38;
 	private: System::Windows::Forms::Label^  lblJS37;
-
-
-
-
-	private: System::Windows::Forms::Label^  lblJS35;
-
-	private: System::Windows::Forms::Label^  lblJS34;
-
-	private: System::Windows::Forms::Label^  lblJS33;
-
-	private: System::Windows::Forms::Label^  lblJS32;
-
-	private: System::Windows::Forms::Label^  lblJS31;
-
-	private: System::Windows::Forms::Label^  lblJS30;
 	private: System::Windows::Forms::Label^  lblJS36;
-
-
+	private: System::Windows::Forms::Label^  lblJS35;
+	private: System::Windows::Forms::Label^  lblJS34;
+	private: System::Windows::Forms::Label^  lblJS33;
+	private: System::Windows::Forms::Label^  lblJS32;
+	private: System::Windows::Forms::Label^  lblJS31;
+	private: System::Windows::Forms::Label^  lblJS30;
 	private: System::Windows::Forms::Label^  lblJS29;
-
 	private: System::Windows::Forms::Label^  lblJS28;
-
 	private: System::Windows::Forms::Label^  lblJS27;
-
 	private: System::Windows::Forms::Label^  lblJS26;
-
 	private: System::Windows::Forms::Label^  lblJS25;
-
+	private: System::Windows::Forms::Label^  lblJS24;
 	private: System::Windows::Forms::Label^  lblJS23;
-
 	private: System::Windows::Forms::Label^  lblJS22;
-
 	private: System::Windows::Forms::Label^  lblJS21;
-
 	private: System::Windows::Forms::Label^  lblJS20;
-
 	private: System::Windows::Forms::Label^  lblJS19;
-
 	private: System::Windows::Forms::Label^  lblJS18;
-
+	private: System::Windows::Forms::Label^  lblJS17;
 	private: System::Windows::Forms::Label^  lblJS16;
-
 	private: System::Windows::Forms::Label^  lblJS15;
-
 	private: System::Windows::Forms::Label^  lblJS14;
-
 	private: System::Windows::Forms::Label^  lblJS13;
-
 	private: System::Windows::Forms::Label^  lblJS12;
-
 	private: System::Windows::Forms::Label^  lblJS11;
-
 	private: System::Windows::Forms::Label^  lblJS10;
-
 	private: System::Windows::Forms::Label^  lblJS9;
-
 	private: System::Windows::Forms::Label^  lblJS8;
-
+	private: System::Windows::Forms::Label^  lblJS7;
 	private: System::Windows::Forms::Label^  lblJS6;
-
 	private: System::Windows::Forms::Label^  lblJS5;
-
+	private: System::Windows::Forms::Label^  lblJS4;
 	private: System::Windows::Forms::Label^  lblJS3;
-
 	private: System::Windows::Forms::Label^  lblJS2;
-
-	private: System::Windows::Forms::Label^  lblJS1;
-	private: System::Windows::Forms::Label^  lblAuS4;
-	private: System::Windows::Forms::Label^  lblAuS16;
-	private: System::Windows::Forms::Label^  lblAuS26;
-
-
-
-
+	private: System::Windows::Forms::Label^  lblJS1;	
 	private: System::Windows::Forms::Label^  lblAurClass;
 	private: System::Windows::Forms::Label^  lblAuS37;
-
-
 	private: System::Windows::Forms::Label^  lblAuS36;
-
 	private: System::Windows::Forms::Label^  lblAuS35;
-
 	private: System::Windows::Forms::Label^  lblAuS34;
-
 	private: System::Windows::Forms::Label^  lblAuS33;
-
 	private: System::Windows::Forms::Label^  lblAuS32;
-
 	private: System::Windows::Forms::Label^  lblAuS31;
-
 	private: System::Windows::Forms::Label^  lblAuS30;
-
 	private: System::Windows::Forms::Label^  lblAuS29;
-
 	private: System::Windows::Forms::Label^  lblAuS28;
-
 	private: System::Windows::Forms::Label^  lblAuS27;
-
+	private: System::Windows::Forms::Label^  lblAuS26;
 	private: System::Windows::Forms::Label^  lblAuS25;
-
 	private: System::Windows::Forms::Label^  lblAuS24;
-
 	private: System::Windows::Forms::Label^  lblAuS23;
-
 	private: System::Windows::Forms::Label^  lblAuS22;
-
 	private: System::Windows::Forms::Label^  lblAuS21;
-
 	private: System::Windows::Forms::Label^  lblAuS20;
-
 	private: System::Windows::Forms::Label^  lblAuS19;
-
 	private: System::Windows::Forms::Label^  lblAuS18;
-
 	private: System::Windows::Forms::Label^  lblAuS17;
-
-	private: System::Windows::Forms::Label^  lblAuS15;
-
+	private: System::Windows::Forms::Label^  lblAuS16;
+	private: System::Windows::Forms::Label^  lblAuS15;	
 	private: System::Windows::Forms::Label^  lblAuS14;
-
 	private: System::Windows::Forms::Label^  lblAuS13;
-
 	private: System::Windows::Forms::Label^  lblAuS12;
-
 	private: System::Windows::Forms::Label^  lblAuS11;
-
 	private: System::Windows::Forms::Label^  lblAuS10;
-
 	private: System::Windows::Forms::Label^  lblAuS9;
-
 	private: System::Windows::Forms::Label^  lblAuS8;
-
 	private: System::Windows::Forms::Label^  lblAuS7;
-
 	private: System::Windows::Forms::Label^  lblAuS6;
-
 	private: System::Windows::Forms::Label^  lblAuS5;
-
+	private: System::Windows::Forms::Label^  lblAuS4;
 	private: System::Windows::Forms::Label^  lblAuS3;
-
 	private: System::Windows::Forms::Label^  lblAuS2;
-
-	private: System::Windows::Forms::Label^  lblAuS1;
-
-	private: System::Windows::Forms::Label^  lblJS24;
-
-	private: System::Windows::Forms::Label^  lblJS17;
-
-	private: System::Windows::Forms::Label^  lblJS7;
-
-	private: System::Windows::Forms::Label^  lblJS4;
+	private: System::Windows::Forms::Label^  lblAuS1;	
 	private: System::Windows::Forms::GroupBox^  gbSkills;
 	private: System::Windows::Forms::Label^  lblLoadSP;
 	private: System::Windows::Forms::Label^  lblCDTimer;
@@ -448,18 +305,7 @@ namespace BorderlandsThePreSequel {
 	private: System::Windows::Forms::CheckBox^  ckbxuBkPk;
 	private: System::Windows::Forms::Timer^  bkpkTimer;
 	private: System::Windows::Forms::Timer^  godmodeTimer;
-
 	private: System::ComponentModel::IContainer^  components;
-
-
-
-
-
-
-
-
-
-
 
 	private:
 		/// <summary>
